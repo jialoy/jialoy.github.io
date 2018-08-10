@@ -17,9 +17,22 @@ h1 {
 p1 {
  font-family: "Calibri", "Trebuchet MS", sans-serif;
  font-size: 16px;
- letter-spacing: 1px;
  font-style: normal;
  font-variant: normal;
+ letter-spacing: 1px;
+}
+
+a:link {
+ font-family: "Calibri", "Trebuchet MS", sans-serif;
+ font-size: 16px;
+ color: #8e8e8e;
+ font-style: normal;
+ font-variant: normal;
+ text-decoration: none;
+}
+
+a:hover {
+ color: #6b6b6b;
 }
 
 div#wrapperHeader {
@@ -56,9 +69,28 @@ div#wrapperName {
  -webkit-align-items: center;
 }
 
-div#mainDiv {
+div#navigation {
+ position: relative;
+ top: 4%;
+ left: 10%;
+}
+
+table#links{
+ width: 20%;
+}
+
+div#about {
+ display: block;
  max-width: 60%;
  position: relative;
+ top: 12%;
  left: 10%;
- top: 10%;
+}
+
+div#research {
+ display: none;
+ max-width: 60%;
+ position: relative;
+ top: 12%;
+ left: 10%;
 }
