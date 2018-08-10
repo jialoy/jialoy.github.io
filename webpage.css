@@ -14,6 +14,13 @@ h1 {
  line-height: 30px;
 }
 
+h2 {
+ font-family: "Calibri", "Trebuchet MS", sans-serif;
+ font-size: 20px;
+ font-style: normal;
+ font-variant: normal;
+}
+
 p1 {
  font-family: "Calibri", "Trebuchet MS", sans-serif;
  font-size: 16px;
@@ -21,6 +28,11 @@ p1 {
  font-variant: normal;
  letter-spacing: 1px;
 }
+
+.hangingindent {
+  padding-left: 16px ;
+  text-indent: -16px ;
+} 
 
 a:link {
  font-family: "Calibri", "Trebuchet MS", sans-serif;
@@ -92,6 +104,14 @@ div#about {
 }
 
 div#research {
+ display: none;
+ max-width: 60%;
+ position: relative;
+ top: 12%;
+ left: 10%;
+}
+
+div#cv {
  display: none;
  max-width: 60%;
  position: relative;
