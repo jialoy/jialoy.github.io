@@ -35,6 +35,10 @@ a:hover {
  color: #6b6b6b;
 }
 
+a:visited {
+ color: #8e8e8e;
+}
+
 div#wrapperHeader {
  max-width: 100%;
  position: relative;
@@ -47,8 +51,8 @@ div#wrapperHeader img{
 }
 
 div#wrapperName {
- width: 25%;
- height: 25%;
+ width: 29%;
+ height: 27%;
  position: absolute;
  top: 85%;
  left: 55%;
