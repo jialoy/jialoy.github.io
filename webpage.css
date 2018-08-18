@@ -43,13 +43,18 @@ a:link {
  text-decoration: none;
 }
 
+a:visited {
+ color: #8e8e8e;
+}
+
 a:hover {
  color: #6b6b6b;
 }
 
-a:visited {
+a:active {
  color: #8e8e8e;
 }
+
 
 div#wrapperHeader {
  max-width: 100%;
