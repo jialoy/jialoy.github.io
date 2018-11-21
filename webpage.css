@@ -116,6 +116,14 @@ div#research {
  left: 10%;
 }
 
+div#teaching {
+ display: none;
+ max-width: 60%;
+ position: relative;
+ top: 12%;
+ left: 10%;
+}
+
 div#cv {
  display: none;
  max-width: 60%;
