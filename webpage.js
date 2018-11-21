@@ -32,5 +32,5 @@ cvLink.addEventListener("click", function() {
 	about.style.display = "none";
 	research.style.display = "none";
 	teaching.style.display = "none";
-	cv.style.display = "none";
+	cv.style.display = "block";
 });
