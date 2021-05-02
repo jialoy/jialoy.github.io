@@ -60,10 +60,12 @@
 }
 
 .wrapper {
-    background-color: #EEE;
-    height: 100%;
+    background-color: none;
+    height: 850px;
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0
+    left: 0;
+    right: 0; 
+    margin: auto;
 }
