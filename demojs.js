@@ -135,8 +135,11 @@ function applyDrag(elem, images, trialIdx) {
         let shiftX = event.clientX - elem.getBoundingClientRect().left;
         let shiftY = event.clientY - elem.getBoundingClientRect().top;
         
-        let rightEdge = document.documentElement.clientWidth - elem.offsetWidth;
-        let bottomEdge = document.documentElement.clientHeight - elem.offsetHeight;
+        //let rightEdge = document.documentElement.clientWidth - elem.offsetWidth;
+        //let bottomEdge = document.documentElement.clientHeight - elem.offsetHeight;
+        let rightEdge = document.getElementById("wrapper").offsetWidth - elem.offsetWidth;
+        let bottomEdge = document.getElementById("wrapper").offsetHeight - elem.offsetHeight
+        
         
         //bunny.style.position = 'absolute';
         //elem.style.zIndex = 1000;
