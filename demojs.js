@@ -36,6 +36,21 @@ Array.prototype.removeElement = function() {
 };
 
 
+function displayButton(parentId, text, id) {
+    // create next button and append to parent container
+    var button = document.createElement("button");
+    button.id = id;
+    button.innerHTML = text;
+    button.style.position = "absolute";
+    button.style.bgcolor = "white";
+    button.style.width = toPx(100);
+    button.style.height = toPx(40);
+    button.style.top = toPx(270);
+    button.style.left = toPx(250);
+    
+    document.getElementById(parentId).appendChild(button);
+}
+
 function displayImg(parentId, className, imgId, src, imgWidth, imgHeight, xPos, yPos) {
     var img = document.createElement("img");
     img.id = imgId;
@@ -60,6 +75,12 @@ function checkRemoveElem(elemId, parentId) {
     if (document.getElementById(parentId).contains(document.getElementById(elemId))) {
         document.getElementById(elemId).remove();
     }
+}
+
+function playAudio() {
+    setTimeout(function() {
+        soundFile.play();
+    }, 250);
 }
 
 function displayAvatars(cond) {
@@ -98,9 +119,13 @@ function resetImages() {
     eventHandler();
 }
 
+let soundFile = new Audio();
+soundFile.src = "audio/placeholder.wav";
+
+
 let currentDroppable = null;
 
-startImages();
+//startImages();
 
 
 function enterDroppable(elem, images) {
@@ -120,6 +145,7 @@ function leaveDroppable(elem, images) {
 
 function trial(trialIdx, images) {
     console.log("trial start");
+    playAudio();
     for (let i=0; i<images.length; i++) {
         applyDrag(images[i], images, trialIdx);
     }
@@ -202,6 +228,17 @@ function applyDrag(elem, images, trialIdx) {
     };
 }
 
+function begin() {
+    
+    document.getElementById("startButton").removeEventListener("click", begin, false);
+    
+    checkRemoveElem("startButton", "mainDiv");
+    
+    startImages();
+    
+    eventHandler();
+}
+
 
 var eventHandler = (function() {
     var trialIdx = 0;
@@ -223,4 +260,8 @@ var eventHandler = (function() {
     };
 }());
 
-eventHandler();
+displayButton("mainDiv", "start", "startButton");
+
+document.getElementById("startButton").addEventListener("click", begin, false);
+
+//eventHandler();
