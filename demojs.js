@@ -102,6 +102,7 @@ function removeAvatars() {
 
 function startImages() {
     displayAvatars("diff");
+    document.getElementById("table").style.display = "block";
     displayImg("imgDivTop", "draggable", "a", "images/bunny.png", 150, 150, 0, 0);
     displayImg("imgDivBottom", "draggable", "b", "images/mouse.png", 150, 150, 0, 0);
     displayImg("imgDivLeft", "draggable", "c", "images/chick.png", 150, 150, 0, 0);
