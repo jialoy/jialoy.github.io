@@ -1,6 +1,7 @@
 .mainDiv {
     border: 0px dashed;
     background-color: #DDD;
+    padding: 10px;
     display: block;
     position: absolute;
 	top: 100px;
