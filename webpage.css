@@ -124,4 +124,12 @@ div#teaching {
  left: 10%;
 }
 
+div#sidethings {
+ display: none;
+ max-width: 60%;
+ position: relative;
+ top: 12%;
+ left: 10%
+}
+
 
