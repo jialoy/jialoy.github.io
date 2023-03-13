@@ -41,10 +41,10 @@ sidethingsLink.addEventListener("click", function () {
 	sidethings.style.display = "block";
 });
 
-cvLink.addEventListener("click", function() {
-	about.style.display = "none";
-	research.style.display = "none";
-	teaching.style.display = "none";
-	//cv.style.display = "block";
-	sidethings.style.display = "none";
-});
+//cvLink.addEventListener("click", function() {
+//	about.style.display = "none";
+//	research.style.display = "none";
+//	teaching.style.display = "none";
+//	cv.style.display = "block";
+//	sidethings.style.display = "none";
+//});
