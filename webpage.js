@@ -1,3 +1,5 @@
+console.log("If you are reading this, welcome to my page. I like apples, climbing, research, and dinosaurs, not necessarily in that order. My favourite dinosaurs are the troodon and the stegosaurus, because they have big brains and tiny brains respectively.")
+
 var about = document.getElementById("about");
 var research = document.getElementById("research");
 var teaching = document.getElementById("teaching");
