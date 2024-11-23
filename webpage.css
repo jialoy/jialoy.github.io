@@ -1,7 +1,46 @@
-html, body {
- height: 100%;
- margin: 0;
- padding: 0;
+html {
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div#wrapper-header {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+
+div#wrapper-header img {
+  max-height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+div#wrapper-name {
+  width: 29%;
+  height: 27%;
+  position: absolute;
+  top: 85%;
+  left: 55%;
+  background-color: #c9c9c9;
+  opacity: 0.8;
+  margin: 0 auto;
+  border: 2px solid #e9ecec;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 h1 {
@@ -55,41 +94,6 @@ a:active {
  color: #8e8e8e;
 }
 
-
-div#wrapperHeader {
- max-width: 100%;
- position: relative;
-}
-
-div#wrapperHeader img{
- max-height: 100%;
- max-width: 100%;
- margin: 0 auto;
-}
-
-div#wrapperName {
- width: 29%;
- height: 27%;
- position: absolute;
- top: 85%;
- left: 55%;
- background-color: #c9c9c9;
- opacity: 0.8;
- margin: 0 auto;
- border: 2px solid #e9ecec;
- display: flex;
- justify-content: center; /* align horizontal */
- align-items: center; /* align vertical */
- display: -webkit-box;
- display: -webkit-flex;
- display: -moz-box;
- display: -ms-flexbox;
- display: flex;
- -webkit-flex-align: center;
- -ms-flex-align: center;
- -webkit-align-items: center;
-}
-
 div#navigation {
  position: relative;
  top: 4%;
@@ -100,29 +104,20 @@ table#links{
  width: 30%;
 }
 
-div#about {
- display: block;
- max-width: 60%;
- position: relative;
- top: 12%;
- left: 10%;
+.content-div {
+  display: none; 
+  max-width: 70%; 
+  position: relative;
+  top: 12%;
+  left: 10%; 
 }
 
-div#research, div#cv, div#sidethings {
- display: none;
- max-width: 80%;
- position: relative;
- top: 12%;
- left: 10%;
+div#home {
+  display: block; 
 }
 
-div#teaching {
- display: none;
- max-width: 65%;
- position: relative;
- top: 12%;
- left: 10%;
+#spacer {
+  height: auto;
+  width: 100%;
+  background: transparent;
 }
-
-
-

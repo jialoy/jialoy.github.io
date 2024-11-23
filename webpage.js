@@ -1,52 +1,45 @@
 console.log("If you are reading this, welcome to my page. I like apples, climbing, research, and dinosaurs, not necessarily in that order. My favourite dinosaurs are the troodon and the stegosaurus, because they have big brains and tiny brains respectively.");
 
-var about = document.getElementById("about");
-var research = document.getElementById("research");
-var teaching = document.getElementById("teaching");
-var sidethings = document.getElementById("sidethings");
-//var cv = document.getElementById("cv");
-var aboutLink = document.getElementById("aboutLink");
-var researchLink = document.getElementById("researchLink");
-var teachingLink = document.getElementById("teachingLink");
-var sidethingsLink = document.getElementById("sidethingsLink");
-//var cvLink = document.getElementById("cvLink");
+const home = document.getElementById("home");
+const research = document.getElementById("research");
+const spacer = document.getElementById("spacer");
 
-aboutLink.addEventListener("click", function() {
+const homeLink = document.getElementById("homeLink");
+const researchLink = document.getElementById("researchLink");
+
+homeLink.addEventListener("click", function() {
+	homeLink.style.visibility = "hidden";
+	spacer.style.display = "block";
 	research.style.display = "none";
-	teaching.style.display = "none";
-	//cv.style.display = "none";
-	about.style.display = "block";
-	sidethings.style.display = "none";
+	home.style.display = "block";
 });
 
 researchLink.addEventListener("click", function() {
-	about.style.display = "none";
-	teaching.style.display = "none";
-	//cv.style.display = "none";
+	homeLink.style.visibility = "visible";
+	spacer.style.display = "none";
+	home.style.display = "none";
 	research.style.display = "block";
-	sidethings.style.display = "none";
 });
 
-teachingLink.addEventListener("click", function() {
-	about.style.display = "none";
-	research.style.display = "none";
-	//cv.style.display = "none";
-	teaching.style.display = "block";
-	sidethings.style.display = "none";
-});
+/**
+ * Dynamic adjustment of spacer element to ensure consistent y scroll across sections
+ */
+function adjustSpacer() {
+	const spacer = document.getElementById("spacer");
 
-sidethingsLink.addEventListener("click", function () {
-	about.style.display = "none";
-	research.style.display = "none";
-	//cv.style.display = "none";
-	teaching.style.display = "none";
-	sidethings.style.display = "block";
-});
+	const heightsArray = [...document.querySelectorAll('.has-height')].map(el => el.offsetHeight);
+	const contentHeight = heightsArray.reduce((sum, currentHeight) => sum + currentHeight, 0);
+	const viewportHeight = window.innerHeight;
+	
+	const extraSpaceNeeded = Math.max(viewportHeight - contentHeight, 0);
+	
+	setTimeout(function() {
+		spacer.style.height =`${extraSpaceNeeded + 1}px`; 
+	}, 100);
 
-//cvLink.addEventListener("click", function() {
-//	about.style.display = "none";
-//	research.style.display = "none";
-//	teaching.style.display = "none";
-//	cv.style.display = "block";
-//	sidethings.style.display = "none";
-//});
+  }
+  
+
+window.addEventListener("load", adjustSpacer);
+
+window.addEventListener("resize", adjustSpacer);
